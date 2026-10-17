@@ -2,20 +2,47 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for employee" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="banking-app" />
+        <module name="auth" />
+        <module name="auth-service" />
+      </profile>
+      <profile name="Annotation profile for EMPLOYEE" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="sca" />
+        <module name="product-service" />
+        <module name="employee" />
+      </profile>
+      <profile name="Annotation profile for EMPLOYEE (1)" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="employee" />
+        <module name="EMPLOYEE (1)" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EMPLOYEE (1)" options="-parameters" />
+      <module name="auth" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="banking-app" options="-parameters" />
       <module name="employee" options="-parameters" />
+      <module name="product-service" options="-parameters" />
+      <module name="sca" options="-parameters" />
     </option>
   </component>
 </project>

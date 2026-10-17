@@ -14,7 +14,7 @@ public class Employee {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false, length = 45)
+    @Column(name = "name",nullable = false, length = 45)
     private String name;
 
     @Column(name = "email", nullable = false, unique = true)
@@ -22,6 +22,5 @@ public class Employee {
 
     @Column(name = "mobile", nullable = false, unique = true, length = 20)
     private String mobile;
-
 
 }
